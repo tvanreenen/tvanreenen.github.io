@@ -17,7 +17,24 @@
       <header>
         <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
 
-        {% include gravatar.html %}
+        {% if site.logo %}
+          <img src="{{site.logo | relative_url}}" alt="Tim VanReenen" />
+        {% endif %}
+        
+        <div>
+          <a href="https://gravatar.com/tvanreenen?utm_source=hovercard" target="_blank">
+            <img src="https://secure.gravatar.com/icons/gravatar.svg" width="32" height="32" alt="Gravatar">
+          </a>
+          <a href="https://www.linkedin.com/in/tvanreenen" target="_blank">
+            <img src="https://s.gravatar.com/icons/linkedin.svg" width="32" height="32" alt="LinkedIn">
+          </a>
+          <a href="https://github.com/tvanreenen" target="_blank">
+            <img src="https://s.gravatar.com/icons/github.svg" width="32" height="32" alt="GitHub">
+          </a>
+          <a class="gravatar-hovercard__social-link" href="https://www.youtube.com/channel/UC_ahYR3NepAYiymLIVraC1w" target="_blank">
+            <img src="https://s.gravatar.com/icons/youtube.svg" width="32" height="32" alt="YouTube">
+          </a>  
+        </div>
 
         <p>{{ site.description | default: site.github.project_tagline }}</p>
 
